@@ -297,12 +297,20 @@ a{
 
 footer li{
   list-style: none;
+  padding: 2px;
 }
 
 .footer li a {
   color: #FAFAD2;
-  text-decoration: none;
+  align-items: center;
+  display: flex;
+  text-decoration: none;  
 }
+
+.footer li a span {
+  padding-left: 5px;
+}
+
 
 .footer-box{
   display: block;
