@@ -36,21 +36,14 @@
     </header>
     <div class="container">
         <!-- SOBRE -->
-        <section class="section-container bg-color-section">
+        <section id="about" class="section-container bg-color-section">
             <div class="about-info">
                 <h1 class="section-title">Sobre a Vere Receitas</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus leo in nisl ultrices
-                    efficitur.
-                    Maecenas vitae enim blandit, scelerisque purus in, elementum dui. Proin porttitor vel est non
-                    feugiat.
-                    Donec varius nunc eu ipsum mattis aliquet. Suspendisse a neque non nulla posuere hendrerit consequat
-                    ac
-                    urna. Cras venenatis iaculis lorem id pretium. Vestibulum ante ipsum primis in faucibus orci luctus
-                    et
-                    ultrices posuere cubilia curae; Aenean sagittis justo nec egestas eleifend. Fusce nec lacus diam.
-                    Nunc
-                    nulla nisl, auctor in justo mollis, elementum viverra nunc.
+                    Olá sou Verenice Baumgardt. Mais conhecida como Vere, muito simpática e mãezona
+                    de 4 filhos e tenho um maravilhoso esposo. O Vere Receitas começou quando em tempos difícies
+                    tínhamos somente uns aos outros. Foi quando meu filho mais velho decidiu fazer um instagram 
+                    para minhas receitinhas. Daí fomos evoluindo para o Vere Receitas que é hoje.
                 </p>
             </div>
             <div class="about-img">
@@ -58,7 +51,7 @@
             </div>
         </section> <!-- /SOBRE -->
         <!--CARDÁPIO-->
-        <section>
+        <section id="cake-menu">
             <h1 class="section-title">Cardápio</h1>
             <div id="innerContainer" class="inner-container">
 
@@ -467,7 +460,7 @@
         </section>
 
         <!-- MAIS VENDIDOS -->
-        <section id="promocoes" class="promocoes bg-color-section">
+        <section id="top-selled" class="promocoes bg-color-section">
             <h1 class="section-title">Mais Vendidos</h1>
             <div id="boloAipimPromocao" class="promo-content">
                 <div class="promo-img" style="background-image: url('./images/boloAipim.jpg');"></div>
@@ -542,50 +535,112 @@
         </section><!-- MAIS VENDIDOS -->
 
         <!-- PROMOÇÕES -->
-        <section class="promocoes">
-            <h1 class="section-title" style="color:#666;">Promoções</h1>
-            <div style="border: 1px solid black; height: auto;">
-                <div class="chevron">
-                    <img src="./images/chevron-esquerdo.png" alt="">
+        <section id="sale" class="promocoes">
+            <h1 class="section-title">Promoções</h1>
+            <div id="boloAipimPromocao" class="promo-content">
+                <div class="promo-img" style="background-image: url('./images/boloAipim.jpg');"></div>
+                <div class="promo-img-content">
+                    <div class="recipes-content">
+                        <h3>Bolo de Aipim</h3>
+                        <br>
+                        <h5>INGREDIENTES</h5>
+                        <p>Açúcar, aipim, leite de coco, ovos, coco ralado, margarina e fermento químico.
+                        </p>
+                        <br>
+                        <h5>ALÉRGICOS</h5>
+                        <p>Contém ovos e soja</p>
+                        <p>
+                            <i>CONTEM GLÚTEN E LACTOSE.</i>
+                            Condições de armazenamento e conservação:
+                            Manter a embalagem fechada após consumo. Guardar em local seco e ventilado ou
+                            mantenha na geladeira. Consulte a data de validade na embalagem.
+                        </p>
+                    </div>
                 </div>
-
-                <div class="chevron align-right">
-                    <img src="./images/chevron-direito.png" alt="">
+            </div>
+            <div id="boloLaranjaPromocao" class="promo-content hidden">
+                <div class="promo-img" style="background-image: url('./images/laranjaDiet.jpg');"></div>
+                <div class="promo-img-content">
+                    <div class="recipes-content">
+                        <h3>Bolo de Laranja</h3>
+                        <br>
+                        <h5>INGREDIENTES</h5>
+                        <p>Açúcar, aipim, leite de coco, ovos, coco ralado, margarina e fermento químico.
+                        </p>
+                        <br>
+                        <h5>ALÉRGICOS</h5>
+                        <p>Contém ovos e soja</p>
+                        <p>
+                            <i>CONTEM GLÚTEN E LACTOSE.</i>
+                            Condições de armazenamento e conservação:
+                            Manter a embalagem fechada após consumo. Guardar em local seco e ventilado ou
+                            mantenha na geladeira. Consulte a data de validade na embalagem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="boloBananaCanelaPromocao" class="promo-content hidden">
+                <div class="promo-img" style="background-image: url('./images/bananaCanela.jpg');"></div>
+                <div class="promo-img-content">
+                    <div class="recipes-content">
+                        <h3>Bolo de Banana com canela</h3>
+                        <br>
+                        <h5>INGREDIENTES</h5>
+                        <p>Açúcar, aipim, leite de coco, ovos, coco ralado, margarina e fermento químico.
+                        </p>
+                        <br>
+                        <h5>ALÉRGICOS</h5>
+                        <p>Contém ovos e soja</p>
+                        <p>
+                            <i>CONTEM GLÚTEN E LACTOSE.</i>
+                            Condições de armazenamento e conservação:
+                            Manter a embalagem fechada após consumo. Guardar em local seco e ventilado ou
+                            mantenha na geladeira. Consulte a data de validade na embalagem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="paginationMaisVendidos" style="padding-top: 1rem">
+                <div style="text-align: center;">
+                    <a id="pag04" class="pagination selected-pagination">1</a>
+                    <a id="pag05" class="pagination">2</a>
+                    <a id="pag06" class="pagination">3</a>
                 </div>
             </div>
         </section><!-- PROMOÇÕES -->
     </div>
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="footer-box">
             <h2><em>Entre em contato</em></h2>
             <ul class="footer-list">
                 <li>
                     <a href="#">
-                        <img src="images\img.png">
+                        <img src="images/img.png" alt="logo instagram">
                         <span>/vere-receitas</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images\img2.png">
+                        <img src="images/img2.png" alt="logo facebook">
                         <span>/vere-receitas</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images\whatsapp.png">
-                        <span>99999-9999</span>
+                        <img src="images/whatsapp.png" alt="logo whatsapp">
+                        <span>(51)99999-9999</span>
                     </a>
                 </li>
 
             </ul>
         </div>
         <div class="footer-box">
-            <img class="logo" src="images/vere.png">
+            <img class="logo" src="images/vere.png" alt="logo vere receitas">
             <h2>Vere Receitas</h2>
             <p>Bolos caseiros feitos com muito amor e carinho</p>
         </div>
     </footer>
+    <button id="backToTop"><img src="images/arrowhead-up.png" alt="topo" title="Voltar ao topo"></button>
     <script src="./js/events.js"></script>
 </body>
 
