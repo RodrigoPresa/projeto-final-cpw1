@@ -107,6 +107,11 @@ height: 120px;
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
+    color: #666;
+}
+
+.color-grey{
+ color:#777;
 }
 
 .about-info{
@@ -141,7 +146,7 @@ height: 120px;
 }
 
 .border{
-  border: 1px solid black;
+  border: 1px solid #999;
 }
 
 h2{
@@ -212,7 +217,9 @@ a{
 }
 
 .close-x-recipes-modal{
-  float:inline-end;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
   font-size:10px;
   margin-right:5px;
   margin-top: 5px;
@@ -220,7 +227,7 @@ a{
 }
 
 .recipes-content{
-  margin-top:30px;
+  margin-top:20px;
   padding:0 5px;
   padding-top:20px;
   font-size:14px;
@@ -236,9 +243,37 @@ a{
   text-align:center;
 }
 
+.promocoes .section-title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.promo-content {
+  width:60%;
+  height: 80%;
+  margin: auto;
+}
+
+.promo-img{
+  height:100%;
+  width:40%;
+  background-size: cover;
+  float: left;
+}
+
+.promo-img-content{
+  height: 100%;
+  width: 50%;
+  float: right;
+  padding-top:20px
+}
+
 .chevron{
-  width:50px;
-  height:50px;
+  width: 200px;
+  margin: auto;
+  margin-top: 20px;
+  display:flex;
+  justify-content: space-around;
 }
 
 .align-right{
