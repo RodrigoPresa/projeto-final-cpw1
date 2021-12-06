@@ -3,7 +3,7 @@
 let paginationBtnsMenu = document.querySelectorAll('#paginationMenu a');
 let paginationBtnsMaisVendidos = document.querySelectorAll('#paginationMaisVendidos a');
 let sectionsBlocksMenu = document.querySelectorAll('#innerContainer .product-section');
-let sectionsBlocksMaisVendidos = document.querySelectorAll('#promocoes .promo-content');
+let sectionsBlocksMaisVendidos = document.querySelectorAll('#top-selled .promo-content');
 let xBtnCloseModal = document.querySelectorAll('#innerContainer .close-x-recipes-modal');
 let recipesModals = document.querySelectorAll('#innerContainer .recipes');
 let openModalVejaMais = document.querySelectorAll('#innerContainer a');
@@ -67,3 +67,23 @@ for(let i = 0; i < xBtnCloseModal.length; i++){
         rightInnerItem[i].classList.remove('hidden');
     });
 };
+
+//botão voltar ao topo
+
+let btn = document.getElementById("backToTop");
+window.onscroll = ()=> {scroll();}
+this.toScroll();
+
+function scroll(){    
+    if(document.documentElement.scrollTop > 100){
+        btn.style.display = "block";
+    }else {
+        btn.style.display = "none";
+    }
+}
+
+function toScroll(){
+    btn.addEventListener("click", ()=>{
+        document.documentElement.scrollTop = 0;
+    });    
+}
