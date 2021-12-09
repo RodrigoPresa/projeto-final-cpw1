@@ -68,6 +68,19 @@ for(let i = 0; i < xBtnCloseModal.length; i++){
     });
 };
 
+//menu toggle (para dispositivos de tela menor do que 810px)
+
+window.onload = function(){
+    const menu = document.querySelector(".menu-toggle");
+    const header = document.querySelector(".nav-container");
+    const nav = document.querySelector(".nav-list");
+
+    menu.onclick = (e) => {
+        header.classList.toggle("on");
+        nav.classList.toggle("on");
+    }
+}
+
 //botão voltar ao topo
 
 let btn = document.getElementById("backToTop");
