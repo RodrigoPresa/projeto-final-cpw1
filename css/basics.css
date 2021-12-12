@@ -1,47 +1,13 @@
-/* .popular {
-  padding: 140px 0;
-  background: #f8faff;
-}
-@media screen and (max-width: 992px) {
-  .popular {
-    padding: 70px 0;
-  }
-}
-.container {
- padding-right:15px;
- padding-left:15px;
- margin-right:auto;
- margin-left:auto;
- border-radius:6px;
-}
-@media (min-width:768px) {
- .container {
-  width:750px
- }
-}
-@media (min-width:992px) {
- .container {
-  width:970px
- }
-}
-@media (min-width:1200px) {
- .container {
-  width:1170px
- }
-}
-.t-title-block {
-  text-align: center;
-}
-.t-title-block img {
-  margin-bottom: 40px;
-} */
-
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   z-index:0;
+}
+
+.container{
+  min-width: 600px;
 }
 
 /* NAV-BAR */
@@ -97,18 +63,48 @@ header{
   min-height: auto;
 }
 
+.section-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  align-items: center;
+  margin-bottom: 30px;
+  height: 100vh;
+  width: 100%;
+}
+
+.hidden{
+  display: none;
+}
+
+
+/* SOBRE */
+
+.about-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 30px;
+  width: 65%;
+  justify-self: center;
+}
+
+.about-info p {
+font-size: 1.3em;
+}
+
+.about-img{    
+  background: url('../images/boloVulcaoChocolate.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* CARDÁPIO E MAIS VENDIDOS */
 .inner-container{
   padding: 10px;
   display:flex;
-}
-
-.section-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    align-items: center;
-    margin-bottom: 30px;
-    height: 100vh;
-    width: 100%;
 }
 
 .section-title {
@@ -122,28 +118,6 @@ header{
  color:#777;
 }
 
-.about-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 30px;
-    width: 65%;
-    justify-self: center;
-}
-
-.about-info p {
-  font-size: 1.3em;
-}
-
-.about-img{    
-    background: url('../images/boloVulcaoChocolate.jpg');
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
 .product-section{
   width: 100%;
   height: 100%;
@@ -152,13 +126,10 @@ header{
 
 .product-section-item{
   max-width: 600px;
-  min-width: 600px;
+  min-width: 400px;
+  width:100%;
   height: 300px;
   display: inline-block;
-}
-
-.hidden{
-  display: none;
 }
 
 .border{
@@ -243,12 +214,11 @@ a{
 }
 
 .recipes-content{
-  margin-top:20px;
   padding:0 5px;
-  padding-top:20px;
   font-size: 0.9em;
   align-items: center;
   justify-content: center;
+  color:#666;
 }
 
 .promocoes{
@@ -278,18 +248,14 @@ a{
 }
 
 .promo-img-content{
-  height: 100%;
-  width: 50%;
+  width:50%;
+  height:100%;
   float: right;
-  padding-top:20px
-}
-
-.chevron{
-  width: 200px;
-  margin: auto;
-  margin-top: 20px;
-  display:flex;
-  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .align-right{
