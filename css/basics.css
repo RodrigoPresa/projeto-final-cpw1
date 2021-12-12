@@ -214,11 +214,13 @@ a{
 }
 
 .recipes-content{
+  margin-top:0.8em;
   padding:0 5px;
   font-size: 0.9em;
   align-items: center;
   justify-content: center;
   color:#666;
+  font-size:0.9em;
 }
 
 .promocoes{
@@ -236,6 +238,7 @@ a{
 
 .promo-content {
   width:60%;
+  min-width:400px;
   height: 80%;
   margin: auto;
 }
@@ -243,12 +246,12 @@ a{
 .promo-img{
   height:100%;
   width:40%;
-  background-size: cover;
+  background-size:cover;
   float: left;
 }
 
 .promo-img-content{
-  width:50%;
+  width:60%;
   height:100%;
   float: right;
   align-items: center;
