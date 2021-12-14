@@ -103,8 +103,7 @@ font-size: 1.3em;
 
 /* CARDÁPIO E MAIS VENDIDOS */
 .inner-container{
-  padding: 10px;
-  display:flex;
+  padding: 10px;  
 }
 
 .section-title {
@@ -124,16 +123,22 @@ font-size: 1.3em;
   text-align: center;
 }
 
+.product-section-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
 .product-section h2{
   margin-bottom: 15px;
 }
 
-.product-section-item{
-  max-width: 600px;
-  min-width: 400px;
+.product-section-item{  
   width:100%;
-  height: 300px;
-  display: inline-block;
+  height: 300px; 
+  flex: 1 0 calc(50% - 10px);
+  margin: 5px;
 }
 
 h2{
@@ -229,10 +234,15 @@ h2{
 
 .promocoes{
   width: 100%;
-  height:450px;
   margin-top:30px;
   padding:40px;
   text-align:center;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .promocoes .section-title {
@@ -247,21 +257,16 @@ h2{
 }
 
 .promo-img{
-  height:100%;
-  width:40%;
+  height: 400px;
+  width: 100%;
   background-size:cover;
   background-position: center;
-  float: left;
 }
 
 .promo-img-content{
-  width:60%;
-  height:100%;
-  float: right;
+  width: 100%;  
   align-items: center;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -271,27 +276,30 @@ h2{
 
 /* FOOTER */
 
-.footer{
+footer{
   background-color: #af7b3e;
   color: #FAFAD2;
-  display: flex;
-	justify-content:space-around;
   padding: 50px 0;
 }
 
-footer li{
+.footer-container{
+  display: flex;
+	justify-content:space-around;
+}
+
+.footer-container li{
   list-style: none;
   padding: 2px;
 }
 
-.footer li a {
+.footer-container li a {
   color: #FAFAD2;
   align-items: center;
   display: flex;
   text-decoration: none;  
 }
 
-.footer li a span {
+.footer-container li a span {
   padding-left: 5px;
 }
 
@@ -306,6 +314,12 @@ footer li{
   padding-left: 15px;
   padding-top: 15px;
   text-align: left;
+}
+
+.devs{
+  color: #fff;
+  padding-top: 30px;
+  text-align: center;
 }
 
 #backToTop{
@@ -393,6 +407,12 @@ footer li{
   .about-info p {
     font-size: 1.2em;
   }
+  .promo-content{
+    width: 100%;
+  }
+  .product-section-item{      
+    flex: 1 0 calc(100% - 10px);
+  }
 }
 
 @media only screen and (max-width: 576px){
@@ -416,12 +436,27 @@ footer li{
     font-size: 0.8em;
   }
 
-  .footer{
-    display: flex;
+  .promocoes{
+    padding: 40px 10px;
+  }
+
+  .promo-content{
+    width: 100%;
+  }  
+
+  .flex-container{
+    flex-direction: column;
+  }
+
+  .footer-container{
     flex-direction: column-reverse;
   }
 
   .footer-box{
     margin-bottom: 15px;
+  }
+
+  #backToTop img{
+    width: 40px;
   }
 }
