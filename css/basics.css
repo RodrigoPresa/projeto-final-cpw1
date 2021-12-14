@@ -1,47 +1,13 @@
-/* .popular {
-  padding: 140px 0;
-  background: #f8faff;
-}
-@media screen and (max-width: 992px) {
-  .popular {
-    padding: 70px 0;
-  }
-}
-.container {
- padding-right:15px;
- padding-left:15px;
- margin-right:auto;
- margin-left:auto;
- border-radius:6px;
-}
-@media (min-width:768px) {
- .container {
-  width:750px
- }
-}
-@media (min-width:992px) {
- .container {
-  width:970px
- }
-}
-@media (min-width:1200px) {
- .container {
-  width:1170px
- }
-}
-.t-title-block {
-  text-align: center;
-}
-.t-title-block img {
-  margin-bottom: 40px;
-} */
-
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   z-index:0;
+}
+
+.container{
+  min-width: 600px;
 }
 
 /* NAV-BAR */
@@ -97,18 +63,47 @@ header{
   min-height: auto;
 }
 
-.inner-container{
-  padding: 10px;
-  display:flex;
+.section-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  align-items: center;
+  margin-bottom: 30px;
+  height: 100vh;
+  width: 100%;
 }
 
-.section-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    align-items: center;
-    margin-bottom: 30px;
-    height: 100vh;
-    width: 100%;
+.hidden{
+  display: none;
+}
+
+
+/* SOBRE */
+
+.about-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 30px;
+  width: 65%;
+  justify-self: center;
+}
+
+.about-info p {
+font-size: 1.3em;
+}
+
+.about-img{    
+  background: url('../images/cenoura.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* CARDÁPIO E MAIS VENDIDOS */
+.inner-container{
+  padding: 10px;  
 }
 
 .section-title {
@@ -122,47 +117,28 @@ header{
  color:#777;
 }
 
-.about-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 30px;
-    width: 65%;
-    justify-self: center;
-}
-
-.about-info p {
-  font-size: 1.3em;
-}
-
-.about-img{    
-    background: url('../images/boloVulcaoChocolate.jpg');
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
 .product-section{
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
-.product-section-item{
-  max-width: 600px;
-  min-width: 600px;
-  height: 300px;
-  display: inline-block;
+.product-section-container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.hidden{
-  display: none;
+.product-section h2{
+  margin-bottom: 15px;
 }
 
-.border{
-  border: 1px solid #999;
+.product-section-item{  
+  width:100%;
+  height: 300px; 
+  flex: 1 0 calc(50% - 10px);
+  margin: 5px;
 }
 
 h2{
@@ -173,7 +149,8 @@ h2{
   width:50%;
   height:100%;
   float: left;
-  background-size: cover
+  background-size: cover;
+  background-position: center;
 }
 
 .right-inner-item{
@@ -191,10 +168,14 @@ h2{
   align-items: center;
 }
 
-a{
-  color: blue;
+.inner-right-item a{
+  color: #999;
   cursor: pointer;
-  text-decoration:underline;
+  text-decoration: none;
+}
+
+.inner-right-item a:hover{
+  color: #666;
 }
 
 .pagination{
@@ -243,20 +224,25 @@ a{
 }
 
 .recipes-content{
-  margin-top:20px;
+  margin-top:0.8em;
   padding:0 5px;
-  padding-top:20px;
-  font-size: 0.9em;
   align-items: center;
   justify-content: center;
+  color:#666;
+  font-size:0.9em;
 }
 
 .promocoes{
   width: 100%;
-  height:450px;
   margin-top:30px;
   padding:40px;
   text-align:center;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .promocoes .section-title {
@@ -271,25 +257,17 @@ a{
 }
 
 .promo-img{
-  height:100%;
-  width:40%;
-  background-size: cover;
-  float: left;
+  height: 400px;
+  width: 100%;
+  background-size:cover;
+  background-position: center;
 }
 
 .promo-img-content{
-  height: 100%;
-  width: 50%;
-  float: right;
-  padding-top:20px
-}
-
-.chevron{
-  width: 200px;
-  margin: auto;
-  margin-top: 20px;
-  display:flex;
-  justify-content: space-around;
+  width: 100%;  
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .align-right{
@@ -298,27 +276,30 @@ a{
 
 /* FOOTER */
 
-.footer{
+footer{
   background-color: #af7b3e;
   color: #FAFAD2;
-  display: flex;
-	justify-content:space-around;
   padding: 50px 0;
 }
 
-footer li{
+.footer-container{
+  display: flex;
+	justify-content:space-around;
+}
+
+.footer-container li{
   list-style: none;
   padding: 2px;
 }
 
-.footer li a {
+.footer-container li a {
   color: #FAFAD2;
   align-items: center;
   display: flex;
   text-decoration: none;  
 }
 
-.footer li a span {
+.footer-container li a span {
   padding-left: 5px;
 }
 
@@ -333,6 +314,12 @@ footer li{
   padding-left: 15px;
   padding-top: 15px;
   text-align: left;
+}
+
+.devs{
+  color: #fff;
+  padding-top: 30px;
+  text-align: center;
 }
 
 #backToTop{
@@ -420,6 +407,12 @@ footer li{
   .about-info p {
     font-size: 1.2em;
   }
+  .promo-content{
+    width: 100%;
+  }
+  .product-section-item{      
+    flex: 1 0 calc(100% - 10px);
+  }
 }
 
 @media only screen and (max-width: 576px){
@@ -430,7 +423,7 @@ footer li{
   .about-info{
     padding: 10px 0;
     width: 80%;
-}
+  }
 
   .about-info p {
     font-size: 1em;
@@ -439,13 +432,31 @@ footer li{
   .product-section-item{
     min-width: 0;
   }
+  .recipes-content{
+    font-size: 0.8em;
+  }
 
-  .footer{
-    display: flex;
+  .promocoes{
+    padding: 40px 10px;
+  }
+
+  .promo-content{
+    width: 100%;
+  }  
+
+  .flex-container{
+    flex-direction: column;
+  }
+
+  .footer-container{
     flex-direction: column-reverse;
   }
 
   .footer-box{
     margin-bottom: 15px;
+  }
+
+  #backToTop img{
+    width: 40px;
   }
 }
